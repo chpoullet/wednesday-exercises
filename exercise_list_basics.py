@@ -12,6 +12,7 @@ bucket_list = [
     'Learn to scuba dive',
     'Bungee jump'
 ]
+
 # 2
 
 print(bucket_list)

@@ -9,26 +9,40 @@
 # Print out the dictionary information in an ordered way so we can read the story.
 
 
+story = {}
 
-defined_name = input("What would you like your hero/heroine's name to be?  ").strip().capitalize()
+hero = input('Please enter the name of the hero:   ').capitalize()
+villain = input('Please enter the name of the villain:    ').capitalize()
+beginning = input('Please enter the beginning of your story:  ').capitalize()
+middle = input('Please enter the middle part to your story:   ').capitalize()
+end = input('Please enter the end part to your story:   ').capitalize()
+plot = input('Please enter a plot summary:   ').capitalize()
 
-story = {
-    'Beginning': ' ',
-    'Middle': ' ',
-    'End': ' ',
-    'hero': ' '
-}
+story['hero'] = hero
+story['villain'] = villain
+story['beginning'] = beginning
+story['middle'] = middle
+story['end'] = end
+story['plot'] = plot
 
+print(story)
 
-print(f"{story['hero']}{story['Beginning']}")
-print(story['Middle'])
+view_story = input('Do you want to view your story? Y/N:   ').strip().upper()
 
+if view_story == 'Y':
+    view_specificstory = input("What part of the story do you want to view? (beginning, middle, end, plot, hero, villain    )")
+    if view_specificstory == 'beginning':
+        print(story['beginning'])
+    if view_specificstory == 'middle':
+        print(story['middle'])
+    if view_specificstory == 'end':
+        print(story['end'])
+    if view_specificstory == 'plot':
+        print(story['plot'])
+    if view_specificstory == 'hero':
+        print(story['hero'])
+    if view_specificstory == 'villain':
+        print(story['villain'])
 
-middle_input = input("Do you enter the door? Y/N:  ").strip().upper()
-if middle_input == 'Y':
-    print('You enter the door and escape.')
 else:
-    print(story['End'])
-
-
-
+    print('Bye.')

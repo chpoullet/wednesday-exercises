@@ -25,12 +25,10 @@ story['middle'] = middle
 story['end'] = end
 story['plot'] = plot
 
-print(story)
-
 view_story = input('Do you want to view your story? Y/N:   ').strip().upper()
 
 if view_story == 'Y':
-    view_specificstory = input("What part of the story do you want to view? (beginning, middle, end, plot, hero, villain    )")
+    view_specificstory = input("What part of the story do you want to view? (beginning, middle, end, plot, hero, villain)   ")
     if view_specificstory == 'beginning':
         print(story['beginning'])
     if view_specificstory == 'middle':
